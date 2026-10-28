@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Valentin Uzan</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Valentin Uzan. Co-Founder of Opsin. Machine learning and experimental biology.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one narrow reading column; section labels sit in a left margin on wide screens, above the content on phones. */
+:root{
+  --bg:#FAF9F5; --ink:#191917; --muted:#6B6A64; --rule:#E2DED3;
+  --clay:#D97757; --oat:#E8DFCF; --sky:#8EB3D6; --olive:#8A9A6B;
+  --serif:"Newsreader","Iowan Old Style","Charter",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#1C1B19; --ink:#EEEBE2; --muted:#9C998F; --rule:#34322E;
+  --clay:#E08A6B; --oat:#4A443A; --sky:#4F6E8C; --olive:#66744E; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1C1B19; --ink:#EEEBE2; --muted:#9C998F; --rule:#34322E;
+  --clay:#E08A6B; --oat:#4A443A; --sky:#4F6E8C; --olive:#66744E; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:19px;line-height:1.55;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.wrap{max-width:880px;margin:0 auto;padding-block:88px 96px;
+  padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+a{color:inherit;text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:.18em;text-decoration-thickness:1px;transition:text-decoration-color .15s,color .15s}
+a:hover{text-decoration-color:var(--clay)}
+a:focus-visible{outline:2px solid var(--clay);outline-offset:3px;border-radius:2px}
+
+/* intro */
+h1{font-size:44px;line-height:1.1;font-weight:400;letter-spacing:-.015em;margin:0 0 22px;text-wrap:balance}
+.intro p{margin:0 0 14px}
+.intro p.big{font-size:23px;line-height:1.45}
+
+/* sections */
+.row{display:grid;grid-template-columns:150px minmax(0,1fr);gap:0 40px}
+.row + .row{margin-top:72px}
+.label{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:7px;margin:0;font-weight:400}
+.body{min-width:0;max-width:640px}
+.lede{margin:0 0 6px}
+.note{font-family:var(--mono);font-size:12.5px;color:var(--muted);margin:0 0 28px}
+ul.items{list-style:none;margin:0;padding:0;display:grid;gap:30px}
+.items h3{font-size:20px;font-weight:500;line-height:1.35;margin:0 0 6px;text-wrap:balance}
+.items h3 a{text-decoration:none}
+.items h3 a:hover{color:var(--clay)}
+.items p{margin:0 0 8px;color:var(--ink)}
+.meta{font-family:var(--mono);font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+.meta{gap:4px 18px}
+.meta a{color:var(--ink);text-decoration-color:var(--muted)}
+.meta a:hover{color:var(--clay);text-decoration-color:var(--clay)}
+ul.links{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 28px}
+footer{margin-top:96px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+
+@media (max-width:720px){
+  h1{font-size:36px}
+  .intro p.big{font-size:20px}
+  body{font-size:17.5px}
+  .wrap{padding-block:56px 64px}
+  .row{grid-template-columns:minmax(0,1fr);gap:14px}
+  .row + .row{margin-top:56px}
+  .label{padding-top:0}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <section class="row intro" aria-labelledby="about">
+    <h2 class="label" id="about">About</h2>
+    <div class="body">
+      <h1>Valentin Uzan</h1>
+      <p class="big">I explore new approaches to science, across disciplines. I’m now Co-Founder @ <a href="https://opsin.bio/">Opsin</a>, where I build AI systems that connect scientific knowledge, experimental data and lab processes.</p>
+      <p>My background combines machine learning and experimental biology, with experience at Sanofi and Lonza. Previously, I was part of the founding team at Holocyte.</p>
+    </div>
+  </section>
+
+  <section class="row" aria-labelledby="research">
+    <h2 class="label" id="research">Research</h2>
+    <div class="body">
+      <p class="lede">Tools and experiments for measuring biology, learning from biological data and evaluating what models can reliably predict.</p>
+      <p class="note">Independent, open-source work. Not peer-reviewed.</p>
+      <ul class="items">
+        <li>
+          <h3><a href="https://github.com/orgavaa/compass">COMPASS: Designing CRISPR diagnostics</a></h3>
+          <p>A computational platform for multiplexed diagnostic panels targeting drug-resistant tuberculosis. Connects known resistance markers to candidate assays and models of diagnostic activity. Experimental validation pending.</p>
+          <div class="meta"><span>2026</span><span>PhD proposal @ ETH</span><a href="https://github.com/orgavaa/compass">Code</a><a href="https://compass-crispr.com/">Platform</a></div>
+        </li>
+        <li>
+          <h3><a href="https://github.com/orgavaa/B-jepa">B-JEPA: Learning from bacterial genomes</a></h3>
+          <p>Self-supervised representations of bacterial DNA, combining joint-embedding prediction with masked-token learning. Early weights are available; downstream evaluation is pending.</p>
+          <div class="meta"><span>2026</span><a href="https://github.com/orgavaa/B-jepa">Code</a><a href="https://huggingface.co/orgava/dna-bacteria-jepa">Weights</a></div>
+        </li>
+        <li>
+          <h3><a href="https://github.com/orgavaa/GlycoQuant">GlycoQuant: Connecting the cell surface to cell mechanics</a></h3>
+          <p>Image-analysis software relating the glycocalyx to cellular responses to force. Turns fluorescence images into per-cell measurements of surface organisation, signalling and morphology.</p>
+          <div class="meta"><span>2026</span><a href="https://github.com/orgavaa/GlycoQuant">Code</a></div>
+        </li>
+        <li>
+          <h3><a href="https://github.com/orgavaa/amr-esm-prediction">When do protein language models capture antibiotic resistance?</a></h3>
+          <p>A retrospective analysis of 81 resistance mutations across four pathogens. Examines when protein-model scores reflect clinical prevalence, and where resistance mechanisms limit their usefulness.</p>
+          <div class="meta"><span>2026</span><a href="https://github.com/orgavaa/amr-esm-prediction">Code</a></div>
+        </li>
+        <li>
+          <h3><a href="https://github.com/orgavaa/structural-antibody-binding-gnn">Does 3D structure improve antibody-binding predictions?</a></h3>
+          <p>Interface graph neural networks against simpler baselines on AB-Bind. On the test split, the GNN has lower absolute error than gradient boosting but explains less variance, so the benefit of structural modelling remains unresolved.</p>
+          <div class="meta"><span>2025</span><a href="https://github.com/orgavaa/structural-antibody-binding-gnn">Code</a></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="row" aria-labelledby="elsewhere">
+    <h2 class="label" id="elsewhere">Elsewhere</h2>
+    <div class="body">
+      <ul class="links">
+        <li><a href="https://github.com/orgavaa">GitHub</a></li>
+        <li><a href="https://huggingface.co/orgava">Hugging Face</a></li>
+        <li><a href="https://x.com/orgavaa_">X</a></li>
+        <li><a href="https://www.linkedin.com/in/valentin-uzan/">LinkedIn</a></li>
+        <li><a href="https://valentinuzan.substack.com/">Substack</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="row"><span></span><div class="body">Valentin Uzan, 2026</div></footer>
+</div>
+
+</body>
+</html>
